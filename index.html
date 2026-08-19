@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="images/favicon-48.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon-180.png"
+    />
+    <title>奇闻杯征文活动</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="views/charts/charts.css" />
+    <link rel="stylesheet" href="views/catalog/catalog.css" />
+    <link rel="stylesheet" href="views/awards/awards.css" />
+    
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (
+            t === "dark" ||
+            (!t && matchMedia("(prefers-color-scheme: dark)").matches)
+          ) {
+            document.documentElement.setAttribute("data-theme", "dark");
+          }
+        } catch (e) {
+           
+        }
+      })();
+    </script>
+  </head>
+  <body class="no-chrome">
+    <header>
+      <h1 class="page-title">奇闻杯征文活动</h1>
+      <button
+        class="theme-toggle"
+        type="button"
+        aria-label="切换深色 / 浅色模式"
+        title="切换深色 / 浅色模式"
+      ></button>
+    </header>
+    <div class="nav-bar">
+      <nav class="tabs" aria-label="图表分类"></nav>
+    </div>
+
+    <main>
+      
+      <div class="loader" id="loader" role="status" aria-label="加载中">
+        <div class="loader-rings" aria-hidden="true">
+          <span class="loader-ring"></span>
+          <span class="loader-ring loader-ring--inner"></span>
+          <span class="loader-dot"></span>
+        </div>
+      </div>
+
+      
+      <div class="view charts-view" data-view="charts"></div>
+      <div class="view catalog-view" data-view="catalog"></div>
+      <div class="view awards-view" data-view="awards"></div>
+    </main>
+
+    <footer>
+      <small>
+        © 2026 湿热一瞬间·神人联盟
+        <br />
+        本页面采用
+        <a
+          href="https://creativecommons.org/licenses/by-nd/4.0/deed.zh-hans"
+          rel="license"
+          >CC BY-ND 4.0</a
+        >
+        协议授权
+      </small>
+    </footer>
+
+    <script src="scripts/echarts.min.js"></script>
+    <script src="scripts/lucide.min.js"></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
