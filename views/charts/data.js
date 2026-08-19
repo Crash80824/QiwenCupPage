@@ -1,7 +1,7 @@
-import CONFIG from "../../data/config.json" with { type: "json" };
+import CONFIG from "../../data/config.js";
 import { COLORS, ROSE_PALETTE } from "../../scripts/theme.js";
-import CHARTS from "../../data/charts.json" with { type: "json" };
-import JUDGE_STATS from "../../data/judge_stats.json" with { type: "json" };
+import CHARTS from "../../data/charts.js";
+import JUDGE_STATS from "../../data/judge_stats.js";
 import {
 	MS_PER_DAY,
 	WEEKDAY_NAMES,

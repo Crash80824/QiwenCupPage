@@ -1,6 +1,6 @@
 import { parseTime, timeToMs, MS_PER_DAY } from "../../scripts/utils.js";
 import { ratio } from "../../scripts/math.js";
-import CONFIG from "../../data/config.json" with { type: "json" };
+import CONFIG from "../../data/config.js";
 
  
 

@@ -6,7 +6,7 @@ import {
 	fmtStat,
 } from "../../../scripts/math.js";
 import { METRICS, METRIC_GROUPS, KEY, isAuthorMetric } from "../correlation.js";
-import CONFIG from "../../../data/config.json" with { type: "json" };
+import CONFIG from "../../../data/config.js";
 
  
 const metricIdx = (key) => METRICS.findIndex((m) => m.key === key);

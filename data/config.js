@@ -1,0 +1,60 @@
+export default {
+  "title": "奇闻杯征文活动",
+  "hero": {
+    "title": "2026·夏 获奖名单",
+    "summary": "总有一瞬流光，值得你用整个夏天去书写",
+    "stats": {
+      "days": 38,
+      "daysLabel": "活动天数",
+      "entriesLabel": "投稿作品",
+      "readsLabel": "阅读人次"
+    }
+  },
+  "cutoff": "2026-08-16 09:00",
+  "deadline": "2026-07-31",
+  "forumBase": "https://www.shireyishunjian.com/main/",
+  "threadUrlPath": "forum.php?mod=viewthread&tid={tid}",
+  "views": [
+    { "id": "catalog", "label": "作品目录" },
+    { "id": "awards", "label": "获奖名单" },
+    { "id": "charts", "label": "数据图表" }
+  ],
+  "validTracks": ["超自然", "见闻", "万众瞩目", "拘束", "医院"],
+  "invalidTrack": "不合规",
+  "userGroupOrder": ["三水", "四水", "五水", "六水", "七水", "八水", "九水", "VIP", "名誉", "管理"],
+  "metricGroups": [
+    { "id": "author-accum", "label": "作者 · 账号积累" },
+    { "id": "work-income", "label": "作品 · 活动收益" },
+    { "id": "work-heat", "label": "作品 · 热度" },
+    { "id": "work-form", "label": "作品 · 形态" }
+  ],
+  "metrics": [
+    { "key": "points", "label": "积分", "group": "author-accum" },
+    { "key": "contribution", "label": "贡献", "group": "author-accum" },
+    { "key": "trend", "label": "人气", "group": "author-accum" },
+    { "key": "author_threads", "label": "主题数", "group": "author-accum" },
+    { "key": "author_replies", "label": "回帖数", "group": "author-accum" },
+    { "key": "fans", "label": "粉丝数", "group": "author-accum" },
+    { "key": "reg_days", "label": "注册时长（天）", "group": "author-accum" },
+    { "key": "online_hours", "label": "在线时长（小时）", "group": "author-accum" },
+    { "key": "active_gap", "label": "活跃间隔（天）", "group": "author-accum" },
+    { "key": "event_income", "label": "活动收益（含精华）", "group": "work-income" },
+    { "key": "event_income_self", "label": "活动收益（不含精华）", "group": "work-income" },
+    { "key": "views", "label": "浏览量", "group": "work-heat" },
+    { "key": "replies", "label": "回复量", "group": "work-heat" },
+    { "key": "favs", "label": "收藏量", "group": "work-heat" },
+    { "key": "other_replies", "label": "他人回复量", "group": "work-heat" },
+    { "key": "daily_views", "label": "日均浏览量", "group": "work-heat" },
+    { "key": "rr_other", "label": "他人回复比（%）", "unit": "%", "group": "work-heat" },
+    { "key": "fav_ratio", "label": "收藏比（%）", "unit": "%", "group": "work-heat" },
+    { "key": "engagement", "label": "互动比（%）", "unit": "%", "group": "work-heat" },
+    { "key": "word_count", "label": "字数", "group": "work-form" },
+    { "key": "newline_count", "label": "换行数", "group": "work-form" },
+    { "key": "niao_count", "label": "“尿”数", "group": "work-form" },
+    { "key": "track_count", "label": "参与赛道数", "group": "work-form" },
+    { "key": "submit_hour", "label": "发布时间（小时）", "group": "work-form" },
+    { "key": "edit_days", "label": "编辑间隔（天）", "group": "work-form" },
+    { "key": "content_floors", "label": "正文楼数", "group": "work-form" }
+  ],
+  "metricHelp": "以下为导出变量的口径说明（原始字段如积分/浏览量/字数等无需解释）：\n\n【作品 · 活动收益】\n· 活动收益（含精华）：该作品在本次活动内的总积分收益，包含精华奖励与在自己投稿内收到的评分，所有贡献会折合为人气；\n· 活动收益（不含精华）：该作品在本次活动内仅自身投稿内收到的评分，不含精华奖励，所有贡献会折合为人气；\n\n【作者 · 账号积累】\n· 注册时长（天）：数据截止时作者的注册天数；\n· 在线时长（小时）：数据截止时作者的在线小时数；\n· 活跃间隔（天）：本次活动最早投稿日距上次在本版发帖日的时间间隔（天）；从未在本版发帖者以注册日为基准；\n\n【作品 · 热度】\n· 日均浏览量：浏览量 ÷ (数据截止日 - 投稿日)；\n· 他人回复比（%）：他人回复量 ÷ 浏览量 × 100；\n· 收藏比（%）：收藏量 ÷ 浏览量 × 100；\n· 互动比（%）：除去正文楼层后楼主回复的占比 × 100，越高表示作者在楼内聊天互动越多；\n\n【作品 · 形态】\n· 发布时间（小时）：发布时刻的小时数值；\n· 编辑间隔（天）：最后编辑时间 − 发布时间（向上取整），从未编辑时为 0；\n· 正文楼数：正文内容所占楼层数；\n· 参与赛道数：作品参与的赛道数量；\n· “尿”数：正文中“尿”字出现的次数；"
+};

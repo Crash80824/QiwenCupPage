@@ -1,5 +1,5 @@
  
-import CONFIG from "../../data/config.json" with { type: "json" };
+import CONFIG from "../../data/config.js";
 import {
 	parseTime,
 	timeToMs,

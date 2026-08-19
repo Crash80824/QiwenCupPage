@@ -1,6 +1,6 @@
  
 import { resizeAll, replayChartAnimations } from "./views/charts/charts.js";
-import CONFIG from "./data/config.json" with { type: "json" };
+import CONFIG from "./data/config.js";
 
  
 export const VIEWS = CONFIG.views;

@@ -1,7 +1,7 @@
  
 import { tooltip, COLORS } from "../../../scripts/theme.js";
 import { MS_PER_DAY } from "../../../scripts/utils.js";
-import CONFIG from "../../../data/config.json" with { type: "json" };
+import CONFIG from "../../../data/config.js";
 
 export function buildTrendOption({ dates, daily, cumulative }, theme) {
 	

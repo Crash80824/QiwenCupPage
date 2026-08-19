@@ -16,7 +16,7 @@ import {
 } from "./views/charts/charts.js";
 import { buildCatalogView } from "./views/catalog/catalog.js";
 import { renderAwards, setAppThreads } from "./views/awards/awards.js";
-import CONFIG from "./data/config.json" with { type: "json" };
+import CONFIG from "./data/config.js";
 
  
 function buildPage(threads, awardsData) {
@@ -85,13 +85,12 @@ async function init() {
 	 
 	let threads, awardsData;
 	try {
-		const [tRes, aRes] = await Promise.all([
-			fetch("data/threads.json", { cache: "no-cache" }),
-			fetch("data/awards.json", { cache: "no-cache" }),
+				const [tMod, aMod] = await Promise.all([
+			import("./data/threads.js"),
+			import("./data/awards.js"),
 		]);
-		if (!tRes.ok) throw new Error("threads.json: HTTP " + tRes.status);
-		if (!aRes.ok) throw new Error("awards.json: HTTP " + aRes.status);
-		[threads, awardsData] = await Promise.all([tRes.json(), aRes.json()]);
+		[threads, awardsData] = [tMod.default, aMod.default];
+
 	} catch (e) {
 		
 		console.error("数据加载失败", e);

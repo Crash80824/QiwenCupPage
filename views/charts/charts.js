@@ -116,13 +116,12 @@ function buildChartsView(doc) {
  
 async function loadChartData(threads) {
 	try {
-		const [uRes, sRes] = await Promise.all([
-			fetch("data/users.json", { cache: "no-cache" }),
-			fetch("data/scores.json", { cache: "no-cache" }),
+				const [uMod, sMod] = await Promise.all([
+			import("../../data/users.js"),
+			import("../../data/scores.js"),
 		]);
-		if (!uRes.ok) throw new Error("users.json: HTTP " + uRes.status);
-		if (!sRes.ok) throw new Error("scores.json: HTTP " + sRes.status);
-		const [users, scores] = await Promise.all([uRes.json(), sRes.json()]);
+		const [users, scores] = [uMod.default, sMod.default];
+
 		buildChartsView(buildDoc({ threads, users, scores }));
 	} catch (e) {
 		console.error("[init] 图表数据加载失败：", e);
